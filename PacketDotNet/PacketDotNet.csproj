@@ -125,6 +125,13 @@
     <Compile Include="LLDP\AddressFamily.cs" />
     <Compile Include="LLDP\StringTLV.cs" />
     <Compile Include="LLDP\TLVCollection.cs" />
+    <Compile Include="DnsFields.cs" />
+    <Compile Include="DnsPacket.cs" />
+    <Compile Include="DnsPacketType.cs" />
+    <Compile Include="DnsResponseCode.cs" />
+    <Compile Include="Dns\DnsClass.cs" />
+    <Compile Include="Dns\DnsQuestionEntry.cs" />
+    <Compile Include="Dns\DnsType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -132,6 +139,7 @@
     <Folder Include="MiscUtil\" />
     <Folder Include="MiscUtil\IO\" />
     <Folder Include="LLDP\" />
+    <Folder Include="Dns\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
