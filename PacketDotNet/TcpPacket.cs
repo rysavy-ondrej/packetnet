@@ -710,6 +710,11 @@ namespace PacketDotNet
             return tcpPacket;
         }
 
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitTcpPacket(this);
+        }
+
         /// <summary>
         /// Contains the Options list attached to the TCP header
         /// </summary>

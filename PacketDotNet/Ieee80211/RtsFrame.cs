@@ -33,7 +33,7 @@ namespace PacketDotNet
         /// RTS Frame has a ReceiverAddress[6], TransmitterAddress[6] and a FrameCheckSequence[4],
         /// these fields follow the common FrameControl[2] and DurationId[2] fields
         /// </summary>
-        public class RtsFrame : MacFrame
+        public class RtsFrame : ControlFrame
         {
             /// <summary>
             /// ReceiverAddress
@@ -89,6 +89,7 @@ namespace PacketDotNet
                                      ReceiverAddress, 
                                      TransmitterAddress);
             }
+
         } 
     }
 }

@@ -241,6 +241,11 @@ namespace PacketDotNet
             }
             return null;
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitOSPFv2Packet(this);
+        }
     }
 
     /// <summary>

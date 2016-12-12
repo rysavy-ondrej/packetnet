@@ -321,6 +321,11 @@ namespace PacketDotNet
             return buffer.ToString();
         }
 
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitWakeOnLanPacket(this);
+        }
+
         #endregion
 
         #region Members

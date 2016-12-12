@@ -33,7 +33,7 @@ namespace PacketDotNet
         /// <summary>
         /// Block acknowledgment request frame.
         /// </summary>
-        public class BlockAcknowledgmentRequestFrame : MacFrame
+        public class BlockAcknowledgmentRequestFrame : ControlFrame
         {
             private class BlockAckRequestField
             {
@@ -226,6 +226,7 @@ namespace PacketDotNet
             {
                 return String.Format("RA {0} TA {1}", ReceiverAddress, TransmitterAddress);
             }
+
         } 
     }
 }

@@ -170,7 +170,7 @@ namespace PacketDotNet
                 this.SequenceControlBytes = this.SequenceControl.Field;
                 
             }
-            
+
         }
 
     }

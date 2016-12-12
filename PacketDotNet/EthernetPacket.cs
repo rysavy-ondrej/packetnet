@@ -352,5 +352,11 @@ namespace PacketDotNet
                                       new PhysicalAddress(dstPhysicalAddress),
                                       EthernetPacketType.None);
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitEthernetPacket(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }

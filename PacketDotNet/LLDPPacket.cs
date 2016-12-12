@@ -347,6 +347,11 @@ namespace PacketDotNet
             return buffer.ToString();
         }
 
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitLLDPPacket(this);            
+        }
+
         #endregion
 
         #region Members

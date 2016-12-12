@@ -32,7 +32,7 @@ namespace PacketDotNet
         /// <summary>
         /// Contention free end frame.
         /// </summary>
-        public class ContentionFreeEndFrame : MacFrame
+        public class ContentionFreeEndFrame : ControlFrame
         {
             /// <summary>
             /// Receiver address
@@ -124,6 +124,7 @@ namespace PacketDotNet
             {
                 return String.Format("RA {0} BSSID {1}", ReceiverAddress, BssId);
             }
+
         } 
     }
 }

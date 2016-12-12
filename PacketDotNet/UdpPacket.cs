@@ -343,5 +343,10 @@ namespace PacketDotNet
 
             return new UdpPacket(SourcePort, DestinationPort);
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitUdpPacket(this);
+        }
     }
 }

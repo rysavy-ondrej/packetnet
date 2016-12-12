@@ -539,8 +539,14 @@ namespace PacketDotNet
             {
                 return ((length % 4) == 0) ? 0 : 4 - (length % 4);
             }
-            
-        #endregion Private Methods
+
+            public override void Accept(PacketVisitor visitor)
+            {
+                visitor.VisitPpiPacket(this);
+                this.PayloadPacket?.Accept(visitor);
+            }
+
+            #endregion Private Methods
         }
     }
 }

@@ -96,6 +96,10 @@ namespace PacketDotNet
                                      DestinationAddress, 
                                      BssId);
             }
+            public override void Accept(PacketVisitor visitor)
+            {
+                visitor.VisitIeee80211ManagementFrame(this);
+            }
         } 
     }
 

@@ -653,5 +653,11 @@ namespace PacketDotNet
             // plus the length of all of the packets it contains
             TotalLength = TotalPacketLength;
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitIPv4Packet(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }

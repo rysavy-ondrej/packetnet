@@ -266,5 +266,10 @@ namespace PacketDotNet
 
             return null;
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitICMPv4Packet(this);
+        }
     }
 }

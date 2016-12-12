@@ -28,7 +28,7 @@ namespace PacketDotNet
     /// http://en.wikipedia.org/wiki/Internet_Layer
     /// </summary>
     [Serializable]
-    public class InternetPacket : Packet
+    public abstract class InternetPacket : Packet
     {
         /// <summary>
         /// Constructor

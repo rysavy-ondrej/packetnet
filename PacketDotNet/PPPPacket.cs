@@ -215,6 +215,12 @@ namespace PacketDotNet
         {
             throw new System.NotImplementedException();
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitPPPPacket(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }
 

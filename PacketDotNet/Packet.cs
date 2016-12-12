@@ -493,5 +493,13 @@ namespace PacketDotNet
                 return AnsiEscapeSequences.Black;
             }
         }
+
+
+        /// <summary>
+        /// Calls <see cref="PacketVisitor"/> for corresponding packet type. Implements 
+        /// packet structure traversal.
+        /// </summary>
+        /// <param name="visitor">Packet visitor implementation.</param>
+        public abstract void Accept(PacketVisitor visitor);
     }
 }

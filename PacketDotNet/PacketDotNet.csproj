@@ -46,6 +46,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ApplicationPacket.cs" />
     <Compile Include="Ieee80211\ActionFrame.cs" />
+    <Compile Include="Ieee80211\ControlFrame.cs" />
     <Compile Include="Ieee80211\ReassociationRequestFrame.cs" />
     <Compile Include="Ieee80211\BlockAcknowledgmentControlField.cs" />
     <Compile Include="Ieee80211\BlockAcknowledgmentFrame.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="OSPFv2Packet.cs" />
     <Compile Include="OSPFVersion.cs" />
     <Compile Include="Packet.cs" />
+    <Compile Include="MiscUtil\Visitor\PacketVisitor.cs" />
     <Compile Include="SessionPacket.cs" />
     <Compile Include="TcpPacket.cs" />
     <Compile Include="UdpPacket.cs" />

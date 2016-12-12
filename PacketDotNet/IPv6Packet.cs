@@ -497,5 +497,11 @@ namespace PacketDotNet
             var dstAddress = RandomUtils.GetIPAddress(ipVersion);
             return new IPv6Packet(srcAddress, dstAddress);
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitIPv6Packet(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }

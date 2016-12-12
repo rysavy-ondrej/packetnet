@@ -34,7 +34,7 @@ namespace PacketDotNet
         /// Format of the 802.11 block acknowledgment frame.
         /// http://en.wikipedia.org/wiki/Block_acknowledgement
         /// </summary>
-        public class BlockAcknowledgmentFrame : MacFrame
+        public class BlockAcknowledgmentFrame : ControlFrame
         {
             private class BlockAcknowledgmentField
             {

@@ -147,6 +147,7 @@ namespace PacketDotNet
                 this.QosControlBytes = this.QosControl;
                 WriteAddressBytes ();
             }
+
         } 
     }
 }

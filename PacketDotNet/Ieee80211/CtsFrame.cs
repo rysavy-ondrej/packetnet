@@ -32,7 +32,7 @@ namespace PacketDotNet
         /// <summary>
         /// Format of a CTS frame
         /// </summary>
-        public class CtsFrame : MacFrame
+        public class CtsFrame : ControlFrame
         {
             /// <summary>
             /// Receiver address

@@ -28,7 +28,7 @@ namespace PacketDotNet
     /// See http://en.wikipedia.org/wiki/Link_Layer
     /// </summary>
     [Serializable]
-    public class InternetLinkLayerPacket : Packet
+    public abstract class InternetLinkLayerPacket : Packet
     {
 #if DEBUG
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

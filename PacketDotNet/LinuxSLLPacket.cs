@@ -217,5 +217,11 @@ namespace PacketDotNet
 
             return buffer.ToString();
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitLinuxSLLPacket(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }

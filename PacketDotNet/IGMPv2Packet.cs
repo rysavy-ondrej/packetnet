@@ -214,5 +214,10 @@ namespace PacketDotNet
 
             return buffer.ToString();
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitIGMPv2Packet(this);
+        }
     }
 }

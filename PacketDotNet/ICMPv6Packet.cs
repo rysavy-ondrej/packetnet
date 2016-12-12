@@ -250,5 +250,11 @@ namespace PacketDotNet
 
             return null;
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitICMPv6Packet(this);
+
+        }
     }
 }

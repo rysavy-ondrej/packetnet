@@ -32,7 +32,7 @@ namespace PacketDotNet
         /// <summary>
         /// Format of an ACK frame
         /// </summary>
-        public class AckFrame : MacFrame
+        public class AckFrame : ControlFrame
         {
             /// <summary>
             /// Receiver address
@@ -110,6 +110,8 @@ namespace PacketDotNet
             {
                 return String.Format("RA {0}", ReceiverAddress);
             }
+
+
         } 
     }
 

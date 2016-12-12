@@ -420,6 +420,12 @@ namespace PacketDotNet
                 
                 return payloadPacketOrData;
             }
+
+            public override void Accept(PacketVisitor visitor)
+            {
+                visitor.VisitRadioPacket(this);
+                this.PayloadPacket?.Accept(visitor);
+            }
         } 
     }
 }

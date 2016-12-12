@@ -222,5 +222,11 @@ namespace PacketDotNet
 
             return buffer.ToString();
         }
+
+        public override void Accept(PacketVisitor visitor)
+        {
+            visitor.VisitIeee8021QPacket(this);
+            this.PayloadPacket?.Accept(visitor);
+        }
     }
 }

@@ -210,6 +210,12 @@ namespace PacketDotNet
                 }
                 return addresses;
             }
+
+            public override void Accept(PacketVisitor visitor)
+            {
+                visitor.VisitIeee80211DataFrame(this);
+                this.PayloadPacket?.Accept(visitor);
+            }
         } 
     }
 }
