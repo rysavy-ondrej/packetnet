@@ -24,7 +24,7 @@ namespace PacketDotNet.Utils
     /// be avoided
     /// </summary>
     [Serializable]
-    public class ByteArraySegment
+    public class ByteArraySegment 
     {
 #if DEBUG
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
