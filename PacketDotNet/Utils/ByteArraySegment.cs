@@ -171,6 +171,15 @@ namespace PacketDotNet.Utils
         }
 
         /// <summary>
+        /// Returns bytes as a <see cref="Span{byte}"/> object.
+        /// </summary>
+        /// <returns>A <see cref="Span{byte}"/> object that enables to access bytes without the necessity to make a copy of them.</returns>
+        public Span<byte> GetSpan()
+        {
+            return new Span<byte>(Bytes, Offset, Length);
+        }
+
+        /// <summary>
         /// Return true if we need to perform a copy to get
         /// the bytes represented by this class
         /// </summary>
